@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+:root {
+  --Dark_Blue: hsl(240, 38%, 20%);
+  --Grayish_Blue: hsl(240, 18%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-image: url("images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 500px;
+  font-size: 32px;
+}
+
+.container {
+  width: 85%;
+  max-width: 1440px;
+  margin: 10% auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial {
+  position: relative;
+  width: 40%;
+}
+.testimonial img {
+  height: 60px;
+  position: absolute;
+  top: -40px;
+  left: 50px;
+}
+.testimonial p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--Dark_Blue);
+  font-weight: 300;
+}
+.testimonial .name {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--Dark_Blue);
+}
+.testimonial .role {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--Grayish_Blue);
+  margin-left: 0.4rem;
+}
+.slider_container {
+  position: relative;
+}
+.slider_container .image {
+  max-width: 100%;
+}
+.slider_container .image img {
+  width: 310px;
+}
+.navigation {
+  position: absolute;
+  display: inline-block;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  bottom: -10px;
+  left: 20%;
+}
+.navigation img {
+  padding: 8px 10px 5px 10px;
+  cursor: pointer;
+  width: 30px;
+}
+@media only screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    min-width: 350px;
+  }
+  .slider_container {
+    text-align: center;
+  }
+  .testimonial {
+    text-align: center;
+    margin-top: 3.8rem;
+    width: 90%;
+  }
+  .testimonial img {
+    top: -30px;
+    left: 40%;
+  }
+  .role {
+    display: block;
+  }
+  .navigation {
+    left: 40%;
+  }
+}
